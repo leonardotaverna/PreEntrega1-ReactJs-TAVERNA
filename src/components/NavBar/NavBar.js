@@ -6,11 +6,14 @@ const NavBar = () => {
         <nav>
             <h3>BlockBuster-X</h3>
             <div>
-                <button>Películas</button>
-                <button>Series</button>
-                <button>Documentales</button>
-                <button>Programas de TV</button>
+                <ul>
+                    <li><a href="películas">Películas</a></li>
+                    <li><a href="series">Series</a></li>
+                    <li><a href="documentales">Documentales</a></li>
+                    <li><a href="programas de tv">Programas de TV</a></li>
+                </ul>   
             </div>
+            
             <div className="carrito">
                 <CartWidget/>
             </div>

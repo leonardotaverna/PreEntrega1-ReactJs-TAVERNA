@@ -1,7 +1,19 @@
-button{
+ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    color: black;
+    padding: 8px;
     background-color: #ff8906;
     border-radius: 10px;
-    
+    text-decoration: none;
 }
 
 nav{
