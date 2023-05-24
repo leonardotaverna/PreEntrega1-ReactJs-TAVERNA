@@ -1,0 +1,11 @@
+.CardItemDetail {
+    background-color: #fffffe;
+    padding: 1rem;
+    margin:auto;
+    width: 40rem;
+    height: auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+    

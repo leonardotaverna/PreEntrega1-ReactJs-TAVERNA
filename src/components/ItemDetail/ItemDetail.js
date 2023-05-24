@@ -3,15 +3,15 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({id, name, img, category, description, price, stock}) => {
     return (
-        <article className="CardItem">
+        <article className="CardItemDetail">
+            <picture>
+                <img src={img} alt={name} className="ItemImg"/>
+            </picture>
             <header className="Header">
                 <h2 className="ItemHeader">
                     {name}
                 </h2>
             </header>
-            <picture>
-                <img src={img} alt={name} className="ItemImg"/>
-            </picture>
             <section>
                 <p className="Info">
                     Categoría: {category}
