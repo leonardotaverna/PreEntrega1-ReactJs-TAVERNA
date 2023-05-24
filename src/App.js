@@ -8,7 +8,8 @@ function App() {
     <div className="App">
       <NavBar />
       <ItemListContainer greeting={"Bienvenidxs a BlockBuster-X app"}/>
-      <ItemCount initial={1} stock={5} onAdd={(quantity) => console.log("Items agregados:", quantity)}/>    
+      <itemDetailContainer />
+      <ItemCount initial={1} stock={5} onAdd={(quantity) => console.log("Items agregados:", quantity)}/>
     </div>
   );
 }

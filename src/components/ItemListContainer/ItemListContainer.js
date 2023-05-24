@@ -1,6 +1,6 @@
 import "./ItemListContainer.css";
 import { useState, useEffect} from "react";
-import { getProducts} from "../../asincMock";
+import { getProducts} from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import React from "react";
 
@@ -12,7 +12,7 @@ const ItemListContainer = ( {greeting} ) => {
             .then(response => {
                 setProducts(response)
             })
-            .cacth(error => {
+            .catch(error => {
                 console.error(error)
             })
     }, []
