@@ -1,6 +1,6 @@
 const products = [
     {
-        id: 1,
+        id: `1`,
         name: "Avengers: Endgame",
         price: 9.99,
         stock: 15,
@@ -9,7 +9,7 @@ const products = [
         description: "Después de los devastadores eventos de 'Avengers: Infinity War', los superhéroes de Marvel se reúnen una vez más para deshacer las acciones de Thanos y restaurar el equilibrio del universo."
     },
     {
-        id: 2,
+        id: `2`,
         name: "Stranger Things",
         price: 12.99,
         stock: 15,
@@ -18,7 +18,7 @@ const products = [
         description: "Un grupo de niños en una pequeña ciudad descubre misteriosos sucesos y fuerzas sobrenaturales cuando su amigo desaparece misteriosamente y una niña con poderes telequinéticos aparece en escena."
     },
     {
-        id: 3,
+        id: `3`,
         name: "Cosmos: A Spacetime Odyssey",
         price: 7.99,
         stock: 15,
@@ -27,7 +27,7 @@ const products = [
         description: "Una serie documental que explora el vasto universo y sus maravillas, llevándonos a viajes a través del tiempo y el espacio para comprender la ciencia y la naturaleza del cosmos."
     },
     {
-        id: 4,
+        id: `4`,
         name: "The Tonight Show Starring Jimmy Fallon",
         price: 4.99,
         stock: 15,
@@ -36,7 +36,7 @@ const products = [
         description: "Un popular programa de entrevistas y entretenimiento presentado por Jimmy Fallon, con invitados famosos, actuaciones musicales y segmentos cómicos que deleitan al público todas las noches."
     },
     {
-        id: 5,
+        id: `5`,
         name: "Joker",
         price: 8.99,
         stock: 15,
@@ -45,7 +45,7 @@ const products = [
         description: "La historia del famoso villano de DC Comics, el Joker, explorando sus orígenes y su transformación en un peligroso criminal en la ciudad de Gotham."
     },
     {
-        id: 6,
+        id: `6`,
         name: "Breaking Bad",
         price: 14.99,
         stock: 15,
@@ -54,7 +54,7 @@ const products = [
         description: "La vida de un profesor de química da un giro inesperado cuando se ve involucrado en el mundo del narcotráfico, produciendo y distribuyendo metanfetaminas junto a un exestudiante."
     },
     {
-        id: 7,
+        id: `7`,
         name: "Planet Earth II",
         price: 6.99,
         stock: 15,
@@ -63,7 +63,7 @@ const products = [
         description: "Un fascinante documental que nos lleva a través de diferentes ecosistemas del planeta, mostrando la belleza y la diversidad de la vida animal en cada uno de ellos."
     },
     {
-        id: 8,
+        id: `8`,
         name: "The Big Bang Theory",
         price: 3.99,
         stock: 15,
@@ -86,6 +86,14 @@ export const getProductById = (productId) => {
     return new Promise ((resolve) => {
         setTimeout(() =>{
             resolve (products.find (prod => prod.id === productId))
+        },800)
+    })
+}
+
+export const getProductsByCategory = (categoryId) => {
+    return new Promise ((resolve) => {
+        setTimeout(() =>{
+            resolve (products.filter (prod => prod.category === categoryId))
         },800)
     })
 }
