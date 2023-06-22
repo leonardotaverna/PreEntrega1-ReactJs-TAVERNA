@@ -1,7 +1,11 @@
-.icon{
+.CartWidget{
+    display:flex;
+    justify-content: center;
+    align-items: center;
     height: 4rem;
     margin:25px;
 }
-.icon img{
+
+.CartImg{
     height: 2rem;
 }
