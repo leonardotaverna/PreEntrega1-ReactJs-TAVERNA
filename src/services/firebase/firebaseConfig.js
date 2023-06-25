@@ -22,7 +22,7 @@ export async function getProducts (){
         (doc) => {
          return {...doc.data(), id: doc.id}
         }
-    );
+    ); 
     
     return dataDocs;
 }
