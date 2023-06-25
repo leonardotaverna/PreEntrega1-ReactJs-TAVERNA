@@ -1,6 +1,6 @@
 import "./ItemDetailContainer.css";
 import { useState, useEffect } from "react";
-import { getProductById } from "../../asyncMock";
+import { getProductById } from "../../services/firebase/firebaseConfig";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
@@ -10,6 +10,7 @@ const ItemDetailContainer = () => {
     const { itemId } = useParams()
     
     useEffect (() => {
+        
         getProductById (itemId)
         .then (response => {
             setProduct (response)
@@ -24,7 +25,6 @@ const ItemDetailContainer = () => {
             <ItemDetail {...product}/>
         </div>
     )
-
 }
 
 export default ItemDetailContainer

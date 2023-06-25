@@ -8,4 +8,9 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.ItemImg {
+    padding: .3rem;
+    height: 15rem;
+    width: 60%;
+}
     
