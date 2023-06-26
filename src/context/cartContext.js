@@ -30,7 +30,7 @@ export const CartProvider = ({children}) => {
     const totalQuantity = () =>  {
         let total = 0;
         cart.forEach((item) => {
-          total += item.count;
+          total += item.quantity;
         });
         return total;
     }

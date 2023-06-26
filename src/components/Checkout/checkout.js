@@ -7,9 +7,8 @@ import { Timestamp, addDoc, collection, documentId, getDocs, query, where, write
 const Checkout = () => {
     const [loading, setLoading] = useState (false)
     const [orderId, setOrderId] = useState ('')
-
     const { cart, total, clearCart } = useContext (CartContext)
-
+    
     const createOrder = async ({ name, phone, email }) => {
         setLoading(true)
 
@@ -24,21 +23,15 @@ const Checkout = () => {
             }
 
             const batch = writeBatch (db)
-
             const outOfStock = []
-
             const ids = cart.map (prod => prod.id)
-
             const productsCollectionRef = collection (db, 'products')
-
             const productsAddedFromFirestore = await getDocs (query (productsCollectionRef, where(documentId(), 'in', ids)))
-
             const { docs } = productsAddedFromFirestore
 
             docs.forEach (doc => {
                 const dataDoc = doc.data()
                 const stockDb = dataDoc.stockDb
-                
                 const productAddedToCart = cart.find (prod => prod.id === doc.id)
                 const prodQuantity = productAddedToCart?.quantity
 
@@ -52,9 +45,7 @@ const Checkout = () => {
             
             if (outOfStock.lenght === 0) {
                 await batch.commit ()
-
                 const orderRef = collection (db, 'orders')
-
                 const orderAdded = await addDoc (orderRef, objOrder)
 
                 setOrderId (orderAdded.id)
