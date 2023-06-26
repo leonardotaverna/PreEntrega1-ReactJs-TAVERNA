@@ -46,3 +46,7 @@ export async function getProductsByCategory (idCategory) {
     
     return dataDocs;
 }
+
+export async function crateOrder(data) {
+    console.log(data);
+}
