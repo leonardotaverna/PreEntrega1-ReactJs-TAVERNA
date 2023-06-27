@@ -10,8 +10,8 @@ import { CartProvider } from './context/cartContext';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <CartProvider>
+      <CartProvider>
+        <BrowserRouter>
           <NavBar />
           <Routes>
             <Route path = "/" element = { <ItemListContainer/>}/>
@@ -21,8 +21,8 @@ function App() {
             <Route path = '/checkout' element = {<Checkout />} />
             <Route path = "*" element = {<h1>ERROR 404 Page not found</h1>}/>
           </Routes>
-        </CartProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }
