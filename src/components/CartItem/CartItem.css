@@ -1,0 +1,37 @@
+.cartList{
+    border-spacing: 0;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    border: solid 1px #ff8b06b7;  
+    width: 95%;
+    margin: 15px auto;
+    text-align: center;
+}
+  
+.cartList_head{
+    background-color: #ff8b06b7;
+    margin: 8px auto;
+}
+  
+.cartList_row{
+    line-height: 56px;
+}
+  
+.cartList_detail{
+    margin-top: 35px;
+    color: black;
+    text-align: center;
+    line-height: 1.5em;
+    width: 100%;
+}
+
+.cartList_detail h4{
+    border-spacing: 0;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    border: solid 1px #ff8b06b7;  
+    width: 91%;
+    margin: 15px auto;
+    text-align: center;
+    padding: 15px;
+}
