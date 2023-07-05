@@ -20,7 +20,6 @@ const Cart = () => {
         <div>
             { cart.map (p => <CartItem key= {p.id}{...p}/>)}
             <button onClick = {() => clearCart ()} className='Button'>Vaciar carrito</button>
-            <Link to = '/Checkout' className='Option'>Checkout</Link>
         </div>
     )
 }
